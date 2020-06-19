@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(cpp_dev)
-
+#if (${CMAKE_BUILD_TYPE} ste)
+#set(CMAKE_CXX_FLAGS "-std=c++11 -O0 ${CMAKE_CXX_FLAGS}")
 aux_source_directory(. SRCS)
 add_executable(main ${SRCS})

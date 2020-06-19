@@ -1,29 +1,28 @@
+/**
+ * @ Author: Your name
+ * @ Create Time: 2020-05-28 10:02:25
+ * @ Modified by: Your name
+ * @ Modified time: 2020-06-03 14:47:44
+ * @ Description:
+ */
+
+#include "common.h"
 #include<iostream>
 
 using namespace std;
 
-class AutoProxy
-{
-private:
-    /* data */
-public:
-    AutoProxy(/* args */);
-    ~AutoProxy();
-};
+static AppManager *apm = NULL;
 
-AutoProxy::AutoProxy(/* args */)
-{
-    cout << "Init the AutoProxy..." <<endl;
-}
-
-AutoProxy::~AutoProxy()
-{
-    cout << "Uninit the the AutoProxy... " <<endl;
+void add_app(Tester *app){
+    if(apm == NULL){
+      apm = new AppManager();
+    }
+    apm->RegisterApp(app);
 }
 
 int main(int argc ,char *argv[])
 {
-    AutoProxy ap;
-    cout << "Startting AutoProxying..." <<endl;
-
+    apm->InitApps();
+    apm->DeleteApps();
+    delete apm;
 }
