@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+enum MessageType {
+	MSG_REQ = 0;
+	MSG_REP = 1;
+}
+
+message msg {
+	required MessageType type =1;
+	required fixed32 seq =2;
+	required fixed32 data_type = 3;
+	required bytes  data = 4;
+}

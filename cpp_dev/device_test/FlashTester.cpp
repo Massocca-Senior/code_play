@@ -6,6 +6,11 @@ FlashTester::FlashTester(/* args */)
     cout << "Init Flashtester" << endl;
 }
 
+int FlashTester::StartWork()
+{
+    cout << "Starting do Flash test" << endl;
+}
+
 FlashTester::~FlashTester()
 {
     cout << "Deinit Flashtester" << endl;

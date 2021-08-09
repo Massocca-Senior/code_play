@@ -7,9 +7,7 @@ private:
     /* data */
 public:
     FlashTester(/* args */);
-    virtual int StartWork(){
-        cout << "Do Flash test" <<endl;
-    }
+    virtual int StartWork();
     ~FlashTester();
 };
 

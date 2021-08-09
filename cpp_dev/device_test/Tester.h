@@ -11,14 +11,11 @@ using namespace std;
 class Tester
 {
 private:
-    /* data */
     string t_name;
     uint32_t t_cycle; 
     
 public:
-    Tester(/* args */);
-    virtual int StartWork(){}
-    ~Tester();
+    virtual int StartWork() = 0;
 };
 
 #endif

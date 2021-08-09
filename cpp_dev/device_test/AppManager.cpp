@@ -8,20 +8,22 @@ AppManager::AppManager(/* args */)
 
 AppManager::~AppManager()
 {
-    cout << "AppManager Denited" <<endl;
+    cout << "AppManager Deinted" <<endl;
 }
 
 int AppManager::RegisterApp(Tester *app)
 {
     cout << "register app " <<endl;
     app_list.push_back(app);
+    return 0;
 }
 
 int AppManager::DeleteApps()
 {
     for(list<Tester *>::iterator ai = app_list.begin(); ai != app_list.end(); ai++){
         delete (*ai);        
-    }    
+    } 
+	return 0;   
 }
 
 int AppManager::InitApps()
@@ -30,4 +32,5 @@ int AppManager::InitApps()
     for ( ai = app_list.begin(); ai != app_list.end(); ai++){
             (*ai)->StartWork();
     }
+    return 0;
 }
