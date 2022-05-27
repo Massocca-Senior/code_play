@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 2.8)
 project(cpp_dev)
 #if (${CMAKE_BUILD_TYPE} ste)
 #set(CMAKE_CXX_FLAGS "-std=c++11 -O0 ${CMAKE_CXX_FLAGS}")
 add_definitions("-Wall -g")
 add_subdirectory(device_test)
 add_subdirectory(cpp_test)
+add_subdirectory(design_pattern)
